@@ -1,0 +1,164 @@
+
+/* Set all parents to full height */
+html, body, .container, #content, #content section {
+  height: 100%;
+}
+
+
+
+body {
+  .container {
+    #header {
+      position: fixed;
+      bottom: $pad*2;
+      z-index: 1;
+      
+      width: $major;
+      margin-left: $margin;
+      
+      @include big-screen {
+        bottom: $pad*4;
+      }
+      
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+      
+      nav {
+        display: none;
+      }
+    }
+  
+    /* background-attachment does the trick */
+    #content {
+      section {
+        position: relative;
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        
+        article {
+          width: $major;
+          margin-left: $margin;
+        }
+        
+        @include mobile {
+          &#features, &#testimonials {
+            height: 280%;
+            
+            article {
+              width: $major + $margin;
+              margin-left: $margin/2;
+            }
+          }
+          
+          &#slide-2, &#slide-3, &#slide-4 {
+            height: 280%;
+          }
+        }
+        
+        @include tablet {
+          &#features, &#testimonials {
+            height: 160%;
+            
+            article {
+              width: $major + $margin;
+              margin-left: $margin/2;
+            }
+          }
+          
+          &#slide-2, &#slide-3, &#slide-4 {
+            height: 160%;
+          }
+        }
+        
+        
+        @include mobile-landscape {
+          &#features, &#testimonials {
+            height: 420%;
+            
+            article {
+              width: $major + $margin;
+              margin-left: $margin/2;
+            }
+          }
+          
+          &#slide-2, &#slide-3, &#slide-4 {
+            height: 420%;
+          }
+        }
+        
+        
+        
+        @include small-screen {
+          &#features {
+            article {
+              width: $major + $margin;
+              margin-left: $margin/2;
+            }
+          }
+        }
+        
+        
+      }
+    }
+  }
+}
+
+
+
+
+
+
+body.business {
+  .container {
+  
+    #header {
+      bottom: $pad;
+      
+      @include big-screen {
+        bottom: $pad*6;
+      }
+      
+      h1, nav {
+        width: auto;
+        float: left;
+      }
+      
+      h1 {
+        margin-left: $pad*2;
+        margin-top: $pad/4
+      }
+      
+      nav {
+        margin-right: 5%;
+        float: right;
+        display: block;
+      }
+      
+      @include small-screen-and-below {
+        display: none;
+      }
+    }
+    
+    form {
+      width: auto;
+      position: fixed;
+      right: $pad;
+      float: right;
+      z-index: 2;
+      
+      top: 40%;
+      
+      @include small-screen-and-below {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+

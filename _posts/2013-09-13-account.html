@@ -1,0 +1,151 @@
+---
+layout: default
+title: My Account 
+class: account
+---
+
+<h1>My Account</h1>
+
+<section>
+  <nav>
+    <ul>
+      <li>Plans & Credits</li>
+      <li>Billing</li>
+    <ul>
+  </nav>
+  
+  <article>
+    <h2>
+      My Current Plan
+      <span>
+        <a href="{{ site.url }}/pricing" title="View all plans">View all plans &rarr;</a>
+      </span>
+    </h2>
+    <p>
+      If you send at least one newsletter a month, a monthly subscription is your best option. We’ll bill your credit card every month, based on the total number of subscribers in your account.
+    </p>
+    
+    <ul>
+      <li>Full feature set</li>
+      <li>Unlimited sending</li>
+      <li>For frequent senders</li>
+    </ul>
+    
+    <p>
+      17/30 Ads spent, $2.08 credit available.
+    </p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Price / Month</th>
+          <th class="active">5</th>
+          <th>10</th>
+          <th>20</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>Ads</td>
+          <td class="active">30</td>
+          <td>100</td>
+          <td>unlimited</td>
+        </tr>
+        
+        <tr>
+          <td>&nbsp;</td>
+          <td class="active"><form><button data-amount="5" data-name="Scatter monthly subscription" data-description="30 ads, $5/month">Change</button></form></td>
+          <td><form><button data-amount="10" data-name="Scatter monthly subscription" data-description="100 ads, $10/month">Change</button></form></td>
+          <td><form><button data-amount="20" data-name="Scatter monthly subscription" data-description="Unlimited ads, $20/month">Change</button></form></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Price / Month</th>
+          <th>Ads</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr class="active">
+          <td>5</td>
+          <td>30</td>
+          <td><form><button data-amount="5" data-name="Scatter monthly subscription" data-description="30 ads, $5/month">Sign up</button></form></td>
+        </tr>
+        
+        <tr>
+          <td>10</td>
+          <td>100</td>
+          <td><form><button data-amount="10" data-name="Scatter monthly subscription" data-description="100 ads, $10/month">Change</button></form></td>
+        </tr>
+        
+        <tr>
+          <td>20</td>
+          <td>unlimited</td>
+          <td><form><button data-amount="20" data-name="Scatter monthly subscription" data-description="Unlimited ads, $20/month">Change</button></form></td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  
+  
+  <article>
+    <h2>
+      Payment information
+    </h2>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Credit card number</th>
+          <th>Credit card type</th>
+          <th>Expiration</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>Card ending in 9874</td>
+          <td>Visa</td>
+          <td>11/2005</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <button>Edit</button>
+    
+    <h2>Billing address information</h2>
+    <form>
+      <ul>
+        <li>
+          <label for="first_name">First name</label>
+          <input id="first_name" type="text">
+        </li>
+        
+        <li>
+          <label for="last_name">Last name</label>
+          <input id="last_name" type="text">
+        </li>
+        
+        <li>
+          <label for="email">Email</label>
+          <input id="email" type="text">
+        </li>
+        
+        <li>
+          <label for="address">Address</label>
+          <input id="address" type="text">
+        </li>
+      </ul>
+      
+      <button>Save</button>
+    </form>
+  </article>
+  
+</section>

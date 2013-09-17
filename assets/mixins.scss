@@ -1,0 +1,155 @@
+/* Mixins.scss
+
+  - reusable CSS components
+  
+*/
+
+
+/* Responsive mixins
+  - http://paulstamatiou.com/responsive-retina-blog-development-part-1
+*/
+
+
+$breakpoint-mobile: 380px !default;
+$breakpoint-tablet: 767px !default;
+$breakpoint-small: 1024px !default;
+$breakpoint-large: 1279px !default;
+$breakpoint-big: 1441px !default;
+
+$breakpoint-a4-width: 793.7px !default;
+$breakpoint-a4-height: 1122.51px !default;
+
+
+@mixin a4 {
+  @media all and (orientation : portrait) {
+    @content;
+  }
+}
+
+
+@mixin mobile {
+	@media (max-width : $breakpoint-mobile) {
+		@content;
+	}
+}
+
+@mixin mobile-landscape {
+	@media only screen and (min-width : $breakpoint-mobile + 1) and (max-width : $breakpoint-tablet) and (orientation : landscape) {
+		@content;
+	}
+}
+
+
+@mixin tablet {
+	@media only screen and (min-width : $breakpoint-mobile + 1) and (max-width : $breakpoint-tablet) {
+		@content;
+	}
+}
+@mixin tablet-and-below {
+	@media only screen and (max-width : $breakpoint-tablet - 1) {
+		@content;
+	}
+}
+@mixin tablet-and-up {
+	@media only screen and (min-width : $breakpoint-tablet + 1) {
+		@content;
+	}
+}
+@mixin tablet-landscape {
+	@media only screen and (min-width : $breakpoint-tablet + 1) and (max-width : $breakpoint-small - 1) and (orientation : landscape) {
+		@content;
+	}
+}
+
+
+@mixin small-screen {
+	@media only screen and (min-width : $breakpoint-tablet + 1) and (max-width : $breakpoint-small - 1) {
+		@content;
+	}
+}
+@mixin small-screen-and-below {
+	@media only screen and (max-width : $breakpoint-small - 1) {
+		@content;
+	}
+}
+@mixin small-screen-and-up {
+	@media only screen and (min-width : $breakpoint-small + 1) {
+		@content;
+	}
+}
+
+@mixin normal-screen {
+  @media only screen and (min-width : $breakpoint-small) and (max-width : $breakpoint-large) {
+		@content;
+	}
+}
+
+@mixin large-screen {
+	@media only screen and (min-width : $breakpoint-large + 1) {
+		@content;
+	}
+}
+
+@mixin big-screen {
+	@media only screen and (min-width : $breakpoint-big + 1) {
+		@content;
+	}
+}
+
+@media only screen and (max-width : $breakpoint-tablet) {
+  .mobile { display: block; }
+  .desktop { display: none !important; }
+}
+
+@media only screen and (min-width : $breakpoint-tablet + 1) {
+  .mobile { display: none; }
+  .desktop { display: block; }
+}
+
+
+
+
+/* Site specific mixins
+*/
+
+
+
+
+
+
+
+/* General mixins
+*/
+
+
+@mixin block {
+  width: 100%;
+  float: left;
+}
+
+
+@mixin hidden {
+  display: none;
+}
+
+
+/* list, inline 
+*/
+@mixin list-inline {
+  display: block;
+  margin: 0;
+  
+  li {
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 0;
+    float: left;
+    margin-right: $pad;
+    
+    &.last, &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+

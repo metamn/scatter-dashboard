@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>My Account</title> 
+    
+    <!-- Compass with SASS -->
+  	<link href="/assets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="/assets/print.css" media="print" rel="stylesheet" type="text/css" />
+		<!--[if lt IE 9]>
+			<link href="/assets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<![endif]-->
+
+		<!--[if lt IE 9]>
+    	<script src="/assets/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    
+    
+    <!-- CSS animations 
+    <link href="/assets/animate.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    -->
+    
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,100,300,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+    <!-- jQuery UI for animations -->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script>
+    
+    <!-- jQuery code -->
+    <script src="/assets/jquery.init.js" type="text/javascript"></script>
+    
+    
+  </head>
+  
+  <body class="my-account account">
+    <div class="container">
+    
+
+
+<header id="header">
+  
+<h1>
+  <a href="" title="Scatter">
+    Scatter
+  </a>
+</h1>
+
+  <nav id="dashboard">
+  <ul>
+    <li class="compose">
+      <a href="/compose" title="Compose">
+      <span><img src="/assets/dashboard.png" alt="Compose"/></span><span>Compose</span>
+      </a>
+    </li>
+    <li class="my-scatters">
+      <a href="/my-scatters" title="My Scatters">
+      <span><img src="/assets/dashboard.png" alt="Compose"/></span><span>My Scatters</span>
+      </a>
+    </li>
+    <li class="statistics">
+      <a href="/statistics" title="Statistics">
+        <span><img src="/assets/dashboard.png" alt="Compose"/></span><span>Statistics</span>
+      </a>
+    </li>
+    <li class="inbox">
+      <a href="/inbox" title="Inbox">
+        <span><img src="/assets/dashboard.png" alt="Compose"/></span><span>Inbox</span>
+      </a>
+    </li>
+    <li class="account">
+      <a href="/account" title="Account">
+        <span><img src="/assets/dashboard.png" alt="Compose"/></span><span>Account</span>
+      </a>
+    </li>
+  </ul>
+  
+  <div id="arrows">
+    <span class="active">&larr;</span>
+    <span>&rarr;</span>
+  </div>
+</nav>
+
+</header>
+
+<main id="content">
+  <h1>My Account</h1>
+
+<section>
+  <nav>
+    <ul>
+      <li>Plans & Credits</li>
+      <li>Billing</li>
+    <ul>
+  </nav>
+  
+  <article>
+    <h2>
+      My Current Plan
+      <span>
+        <a href="/pricing" title="View all plans">View all plans &rarr;</a>
+      </span>
+    </h2>
+    <p>
+      If you send at least one newsletter a month, a monthly subscription is your best option. We’ll bill your credit card every month, based on the total number of subscribers in your account.
+    </p>
+    
+    <ul>
+      <li>Full feature set</li>
+      <li>Unlimited sending</li>
+      <li>For frequent senders</li>
+    </ul>
+    
+    <p>
+      17/30 Ads spent, $2.08 credit available.
+    </p>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Price / Month</th>
+          <th class="active">5</th>
+          <th>10</th>
+          <th>20</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>Ads</td>
+          <td class="active">30</td>
+          <td>100</td>
+          <td>unlimited</td>
+        </tr>
+        
+        <tr>
+          <td>&nbsp;</td>
+          <td class="active"><form><button data-amount="5" data-name="Scatter monthly subscription" data-description="30 ads, $5/month">Change</button></form></td>
+          <td><form><button data-amount="10" data-name="Scatter monthly subscription" data-description="100 ads, $10/month">Change</button></form></td>
+          <td><form><button data-amount="20" data-name="Scatter monthly subscription" data-description="Unlimited ads, $20/month">Change</button></form></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Price / Month</th>
+          <th>Ads</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr class="active">
+          <td>5</td>
+          <td>30</td>
+          <td><form><button data-amount="5" data-name="Scatter monthly subscription" data-description="30 ads, $5/month">Sign up</button></form></td>
+        </tr>
+        
+        <tr>
+          <td>10</td>
+          <td>100</td>
+          <td><form><button data-amount="10" data-name="Scatter monthly subscription" data-description="100 ads, $10/month">Change</button></form></td>
+        </tr>
+        
+        <tr>
+          <td>20</td>
+          <td>unlimited</td>
+          <td><form><button data-amount="20" data-name="Scatter monthly subscription" data-description="Unlimited ads, $20/month">Change</button></form></td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+  
+  
+  <article>
+    <h2>
+      Payment information
+    </h2>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Credit card number</th>
+          <th>Credit card type</th>
+          <th>Expiration</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr>
+          <td>Card ending in 9874</td>
+          <td>Visa</td>
+          <td>11/2005</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <button>Edit</button>
+    
+    <h2>Billing address information</h2>
+    <form>
+      <ul>
+        <li>
+          <label for="first_name">First name</label>
+          <input id="first_name" type="text">
+        </li>
+        
+        <li>
+          <label for="last_name">Last name</label>
+          <input id="last_name" type="text">
+        </li>
+        
+        <li>
+          <label for="email">Email</label>
+          <input id="email" type="text">
+        </li>
+        
+        <li>
+          <label for="address">Address</label>
+          <input id="address" type="text">
+        </li>
+      </ul>
+      
+      <button>Save</button>
+    </form>
+  </article>
+  
+</section>
+
+</main>
+</div>
+
+
+<!-- jQuery code -->
+<script src="/assets/jquery.dashboard.js" type="text/javascript"></script>
+</body>
+</html>
