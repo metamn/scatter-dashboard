@@ -1,164 +1,78 @@
 
-/* Set all parents to full height */
-html, body, .container, #content, #content section {
-  height: 100%;
-}
-
-
-
 body {
   .container {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+    
     #header {
+      @include block;
+      width: $minor/2;
+      overflow: hidden;
+      
       position: fixed;
-      bottom: $pad*2;
-      z-index: 1;
+      top: 0;
+      margin: 0;
+      height: 100%;
       
-      width: $major;
-      margin-left: $margin;
-      
-      @include big-screen {
-        bottom: $pad*4;
+      &.hide {
+        width: $pad*4;
+        
+        nav {
+          li {
+            a {
+              span {
+                &:last-of-type {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
       }
       
-      h1 {
-        padding: 0;
-        margin: 0;
-      }
-      
+     
+      /* The menu */
       nav {
-        display: none;
-      }
-    }
-  
-    /* background-attachment does the trick */
-    #content {
-      section {
-        position: relative;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        
-        article {
-          width: $major;
-          margin-left: $margin;
-        }
-        
-        @include mobile {
-          &#features, &#testimonials {
-            height: 280%;
-            
-            article {
-              width: $major + $margin;
-              margin-left: $margin/2;
-            }
-          }
-          
-          &#slide-2, &#slide-3, &#slide-4 {
-            height: 280%;
-          }
-        }
-        
-        @include tablet {
-          &#features, &#testimonials {
-            height: 160%;
-            
-            article {
-              width: $major + $margin;
-              margin-left: $margin/2;
-            }
-          }
-          
-          &#slide-2, &#slide-3, &#slide-4 {
-            height: 160%;
-          }
-        }
-        
-        
-        @include mobile-landscape {
-          &#features, &#testimonials {
-            height: 420%;
-            
-            article {
-              width: $major + $margin;
-              margin-left: $margin/2;
-            }
-          }
-          
-          &#slide-2, &#slide-3, &#slide-4 {
-            height: 420%;
-          }
-        }
-        
-        
-        
-        @include small-screen {
-          &#features {
-            article {
-              width: $major + $margin;
-              margin-left: $margin/2;
-            }
-          }
-        }
-        
-        
-      }
-    }
-  }
-}
-
-
-
-
-
-
-body.business {
-  .container {
-  
-    #header {
-      bottom: $pad;
-      
-      @include big-screen {
-        bottom: $pad*6;
-      }
-      
-      h1, nav {
-        width: auto;
-        float: left;
-      }
-      
-      h1 {
-        margin-left: $pad*2;
-        margin-top: $pad/4
-      }
-      
-      nav {
-        margin-right: 5%;
-        float: right;
+        @include block;
         display: block;
+        
       }
       
-      @include small-screen-and-below {
-        display: none;
+      #arrows {
+        position: fixed;
+        bottom: $pad;
+        left: $pad;
+        
+        span {
+          cursor: pointer;
+          display: none;
+          
+          &.active {
+            display: block;
+          }
+        }
       }
     }
     
-    form {
+    #content {
+      @include block;
       width: auto;
-      position: fixed;
-      right: $pad;
-      float: right;
-      z-index: 2;
+      height: auto;
+      margin-left: $minor/2;
+      padding: 0 $pad*2;
       
-      top: 40%;
+      &.expand {
+        margin-left: $pad*4;
+      }
       
-      @include small-screen-and-below {
-        display: none;
+      section {
+        @include block;
+        width: auto;
+        height: auto;
       }
     }
   }
 }
-
-
 
 
