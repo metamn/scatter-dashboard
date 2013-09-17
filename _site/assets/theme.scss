@@ -193,6 +193,10 @@ $orange: #FF782A;
       display: none;
     }
     
+    th {
+      font-weight: bold;
+    }
+    
     th, td {
       padding-left: 0;
       
@@ -331,7 +335,48 @@ body {
       background: #fff;
       
       h1 {
+        font-weight: 300;
+        font-size: 170%;
+        
+        @include tablet-and-below {
+          font-size: 160%;
+        }
+        
+        @include tablet-landscape {
+          font-size: 150%;
+        }
+        
+        @include normal-screen {
+          font-size: 130%;
+        }
+        
+        @include big-screen {
+          font-size: 220%;
+        }
+      }
+      
+      h2 {
+        font-weight: 400;
+        text-transform: uppercase;
+        
+        @include tablet-and-below {
+          font-size: 100%;
+        }
+        
+        @include tablet-landscape {
+          font-size: 100%;
+        }
+        
+        @include normal-screen {
+          font-size: 100%;
+        }
+      }
+      
+      h1, h2 {
         padding: $pad 0;
+      }
+      h1 {
+        padding-top: $pad/4;
       }
       
       
@@ -342,7 +387,7 @@ body {
         
         nav {
           @include block;
-          margin: $pad 0;
+          margin: 0 0 $pad;
           
           ul {
             @include list-inline;
